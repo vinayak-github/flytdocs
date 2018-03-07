@@ -8,8 +8,6 @@ During bootup FlytOS automatically connects to any camera device available at po
 .. code-block:: bash
 
 		$ export ROS_NAMESPACE=<namespace>
-		
-.. note:: You can obtain namespace using this command: ``$ rosservice call /get_global_namespace "{}"``
 
 .. code-block:: bash
 
@@ -26,24 +24,21 @@ You can check the list of cameras attached using the command below in your termi
 
 By default FlytOS uses the device present at /dev/video0. In case you have multiple camera devices attached and you wish to use devices other than /dev/video0 you will have to make change in file
 
-``/flyt/flytos/flytcore/share/vision_apps/launch/cam_api.launch``
+.. code-block:: bash
 
+		/flyt/flytos/flytcore/share/vision_apps/launch/cam_api.launch
+		
 
-      
-.. figure:: /_static/Images/cam_api.png
-	:align: center
-	:scale: 50 %
-	
-	Launch for camera settings
- 
- 
 Also, if you want to change the camera capture settings you’ll have to make changes in the launch file mentioned above.
 Various camera capture settings such as resolution, frame rate, brightness, pixel format can be changed by making edits in this launch file. 
 
 If you wish to calibrate your camera and use it for your application refer here “http://wiki.ros.org/camera_calibration”. Once you have obtained the camera calibration file,
-Place your file in the folder below:
+Place your file in the folder below
 
-``/flyt/flytos/flytcore/share/vision_apps/calibration``
+.. code-block:: bash
+
+		/flyt/flytos/flytcore/share/vision_apps/calibration
+		
 
 And change the camera_info_url param in the launch file mentioned above.
 
