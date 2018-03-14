@@ -13,6 +13,10 @@ During bootup FlytOS automatically connects to any camera device available at po
 
 		$ roslaunch vision_apps cam_api.launch
 		
+.. image:: /_static/Images/cam_api.png
+  :align: center
+  
+  
 If you have attached a single camera it’s detected as /dev/video0. If you have attached multiple cameras you will have multiple devices detected namely ‘/dev/video0’, ‘/dev/video1’, ‘/dev/video2’ and so on
 
 You can check the list of cameras attached using the command below in your terminal :
